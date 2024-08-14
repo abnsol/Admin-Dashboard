@@ -21,7 +21,7 @@ The admin dashboard is designed to demonstrate the use of CSS Grid and Flexbox t
 - check live demo : [Admin-Dashboard](https://abnsol.github.io/Admin-Dashboard)
 
 
-## How to Use
+## Clone Repository
 
 1. Clone the repository:
 
