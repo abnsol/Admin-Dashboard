@@ -1,0 +1,252 @@
+*, *::before, *::after {
+    box-sizing: border-box; /*1. Use a more-intuitive box-sizing model.*/
+}
+
+* {
+    margin: 0; /* 2. Remove default margin */
+}
+
+body {
+    line-height: 1.5; /* Typographic tweaks! 3. Add accessible line-height  4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    display: grid;
+    grid-template: 1fr 5fr /1fr 4fr;
+    font-family: "Roboto",sans-serif;
+}
+
+img, picture, video, canvas, svg { /* 5. Improve media defaults */
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select { /* 6. Remove built-in form typography styles */
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 { /*7. Avoid text overflows */
+    overflow-wrap: break-word;
+}
+
+#root, #__next { /* 8. Create a root stacking context */
+    isolation: isolate;
+}
+
+/* div{
+    border: 1px solid red;
+} */
+
+#sidebar{
+    grid-row:span 2;
+    background-color: rgb(49, 141, 216);
+    color: white;
+    display: grid;
+    grid-template-rows: 10% 90vh;
+
+    & > div ul{
+        gap: 10px;
+    }
+    padding: 10px;
+}
+
+#logo{
+    display: flex;
+    & > img{
+        height: 50px;
+        width: 50px;
+    }
+    font-size: 1.5rem;
+    font-weight: bold;
+    align-items: center;
+}
+
+#sidebar li{
+    display: flex;
+    & > div{
+        height: 30px;
+        width: 30px;
+    }
+    gap: 10px;
+    margin: 20px;
+}
+
+#menu{
+    display: grid;
+    grid-template-rows: 3fr 2fr;
+}
+
+#header{
+    display: grid;
+    padding: 20px 30px;
+    gap: 30px;
+}
+
+#top,#bottom{
+    display: flex;
+    justify-content: space-around;
+    & > div{
+        display: flex;
+        align-items: center;
+        gap:10px;
+    }
+}
+
+#bottom{
+    justify-content: space-between;
+}
+
+#greet{
+    flex-direction: column;
+    align-items: start;
+    margin-left: 10px;
+}
+
+.searchicon img,form{
+    position: relative;
+}
+
+.searchicon img{
+    max-width: 30px;
+    max-height: 30px;
+    right: 40px;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-self: flex-start;
+    right: 40px;
+}
+
+input{
+    width: 600px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(226, 226, 238);
+    padding: 10px;
+}
+
+hr{
+    margin: 10px;
+}
+
+#btns{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.btns{
+    background-color: rgb(49, 141, 216);
+    width: 150px;
+    color: white;
+    border-radius:20px ;
+    height: 40px;
+    border: none;
+    outline: none;
+}
+
+#main{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color:rgb(208, 208, 228);
+    padding: 10px;
+}
+
+#items{
+    display: grid;
+    grid-template-rows:1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+    padding: 20px;
+    padding-top:10px ;
+}
+
+.item{
+    box-shadow: 0 0 10px rgb(199, 199, 207);
+    border-left: 8px solid rgb(219, 156, 38);
+    border-radius: 10px;
+    padding: 30px;
+    background-color: white;
+}
+
+.feedback{
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    padding:10px;
+    & > div{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.title{
+    align-self: center;
+    font-weight: 700;
+}
+
+p{
+    font-size: 0.8rem;
+}
+
+#right-bar{
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 50px 320px 50px 320px;
+}
+
+.Announcement{
+    display: grid;
+    background-color: white;
+    padding: 20px;
+    gap: 10px;
+    border-radius:10px;
+    box-shadow: 0 0 10px rgb(213, 213, 224);
+}
+
+#title{
+    display: flex;
+    height: 45px;
+    align-items:end;
+    padding-left: 20px;
+    font-weight: 700;
+}
+
+ul{
+    list-style: none;
+}
+
+.profile{
+    background: url(Icon/pp.jpg) center/cover no-repeat;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+}
+
+.Announcement li{
+    display: flex;
+    gap: 10px;
+}
+
+.Announcement ul{
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.name{
+    font-size: 0.75rem;
+    font-weight: 300;
+}
+
+.username{
+    font-weight: 700;
+}
+
+#greeting{
+    font-size: 0.8rem;
+}
